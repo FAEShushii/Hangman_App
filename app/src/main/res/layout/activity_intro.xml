@@ -16,43 +16,39 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/hangmanImage"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"> <!-- Thay đổi thành vertical -->
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/startGameButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="2 PLAYERS" />
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#F44336"
+            android:onClick="startGame"
+            android:text="PLAY"
+            android:textColor="#FFFFFF" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:id="@+id/twoPlayersButton"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:text="DAILY WORD" />
+            android:layout_margin="10dp"
+            android:backgroundTint="#2196F3"
+            android:text="2 PLAYERS"
+            android:textColor="#FFFFFF"  />
+
+        <Button
+            android:id="@+id/shopButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FF6200EE"
+            android:text="SHOP"
+            android:textColor="#FFFFFF" />
+
+
     </LinearLayout>
-
-    <Button
-        android:id="@+id/shopButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/hangmanImage"
-        android:layout_marginTop="170dp"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#2196F3"
-        android:text="SHOP"
-        android:textColor="#FFFFFF" />
-
-    <Button
-        android:id="@+id/startGameButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/shopButton"
-        android:layout_marginTop="-123dp"
-        android:backgroundTint="#F44336"
-        android:onClick="startGame"
-        android:text="PLAY"
-        android:textColor="#FFFFFF" />
 
 </RelativeLayout>
