@@ -18,7 +18,7 @@
         android:id="@+id/wordToGuess"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="____"
+        android:hint="_ _ _ _"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -301,6 +301,7 @@
         android:text="PLAY"
         android:layout_below="@id/deleteButton"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="#F44336"
         android:layout_marginTop="20dp"
          />
 </RelativeLayout>

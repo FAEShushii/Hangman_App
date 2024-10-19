@@ -18,7 +18,7 @@
         android:layout_below="@id/hangmanImage"
         android:layout_marginTop="40dp"
         android:gravity="center"
-        android:orientation="vertical"> <!-- Thay đổi thành vertical -->
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/startGameButton"

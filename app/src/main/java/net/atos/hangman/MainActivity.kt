@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private var streakTV: TextView? = null
     private var themeTV: TextView? = null
     private var lastGameWon = false
+    private lateinit var playAgainButton: Button
     private var gameOver = false  // New variable to track game state
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity() {
         searchTV = findViewById(R.id.searchTV)
         streakTV = findViewById(R.id.streakTV)
         themeTV = findViewById(R.id.themeTV)
+        playAgainButton = findViewById(R.id.playAgainButton)
         newGame()
     }
 
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun newGame() {
-        errors = 0  // Reset errors to 0 instead of -1
+        errors = 0  // Đặt lại lỗi về 0
         letters.clear()
         val (theme, word) = chooseWord()
         wordSearch = word
@@ -55,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         updateImage(errors)
         wordTV!!.text = stateWord()
         themeTV!!.text = "$theme"
-        searchTV!!.text = ""  // Clear the "YOU WIN" message
+        searchTV!!.text = ""  // Xóa thông báo "YOU WIN"
 
         if (!lastGameWon) {
             streak = 0
@@ -63,7 +65,15 @@ class MainActivity : AppCompatActivity() {
         streakTV!!.text = "Streak: $streak"
 
         lastGameWon = false
-        gameOver = false  // Reset game state
+        gameOver = false  // Đặt lại trạng thái trò chơi
+
+        // Khôi phục trạng thái cho tất cả các nút chữ cái
+        for (i in 0 until 26) { // Giả sử bạn có 26 nút từ A đến Z
+            val buttonId = resources.getIdentifier("button${('A' + i)}", "id", packageName)
+            val button = findViewById<Button>(buttonId)
+            button.isEnabled = true
+            button.alpha = 1.0f // Đặt lại độ sáng nút
+        }
     }
 
     private fun readLetter(c: String) {
@@ -95,18 +105,25 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun touchLetter(v: View) {
-        if (!gameOver) {  // Check if the game is not over
+        if (!gameOver) {  // Kiểm tra xem trò chơi chưa kết thúc
             val letter = (v as Button).text.toString()
             readLetter(letter)
             wordTV!!.text = stateWord()
             updateImage(errors)
+
+            // Làm mờ nút đã nhấn
+            v.isEnabled = false
+            v.alpha = 0.5f // Giảm độ sáng nút
+
             if (wordSearch.contentEquals(String(answers))) {
                 Toast.makeText(this, "YOU WIN!", Toast.LENGTH_SHORT).show()
                 searchTV!!.text = "YOU WIN! " + searchTV!!.text
                 streak++
                 streakTV!!.text = "Streak: $streak"
                 lastGameWon = true
-                gameOver = true  // Set game state to over
+                wordTV!!.text = String(answers)
+                playAgainButton.text = "Next"
+                gameOver = true  // Đánh dấu trò chơi đã kết thúc
             } else if (errors >= 6) {
                 updateImage(7)
                 Toast.makeText(this, "You lose !!!", Toast.LENGTH_SHORT).show()
@@ -114,7 +131,9 @@ class MainActivity : AppCompatActivity() {
                 streak = 0
                 streakTV!!.text = "Streak: $streak"
                 lastGameWon = false
-                gameOver = true  // Set game state to over
+                gameOver = true  // Đánh dấu trò chơi đã kết thúc
+
+                playAgainButton.text = "Play Again"
             }
         } else {
             Toast.makeText(this, "Game over.", Toast.LENGTH_SHORT).show()
@@ -123,6 +142,7 @@ class MainActivity : AppCompatActivity() {
 
     fun start(view: View?) {
         newGame()
+        playAgainButton.text = "Play Again"
     }
 
     fun goToIntro(view: android.view.View) {

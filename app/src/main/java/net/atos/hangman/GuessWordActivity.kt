@@ -14,12 +14,10 @@ class GuessWordActivity : AppCompatActivity() {
     private lateinit var answers: CharArray
     private var errors = 0
     private var letters = ArrayList<String>()
-
     private var image: ImageView? = null
     private var wordTV: TextView? = null
     private lateinit var winMessage: TextView
     private var gameOver = false
-
     private lateinit var homeButton: Button
     private lateinit var playAgainButton: Button
 
@@ -29,14 +27,13 @@ class GuessWordActivity : AppCompatActivity() {
 
         image = findViewById(R.id.img)
         wordTV = findViewById(R.id.wordToGuess)
-        winMessage = findViewById(R.id.winMessage) // Khởi tạo winMessage
+        winMessage = findViewById(R.id.winMessage)
 
         // Nhận từ từ Intent
         wordToGuess = intent.getStringExtra("WORD_TO_GUESS")
         answers = CharArray(wordToGuess!!.length) { '_' }
         updateImage(errors)
         wordTV!!.text = stateWord()
-        winMessage.text = "" // Đặt thông báo thắng ban đầu là rỗng
 
         // Khởi tạo các nút
         homeButton = findViewById(R.id.homeButton)
@@ -44,14 +41,14 @@ class GuessWordActivity : AppCompatActivity() {
 
         // Thiết lập sự kiện cho nút Home
         homeButton.setOnClickListener {
-            val intent = Intent(this, IntroActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, IntroActivity::class.java))
             finish()
         }
 
         // Thiết lập sự kiện cho nút Play Again
         playAgainButton.setOnClickListener {
-            newGame()
+            startActivity(Intent(this, SetWordActivity::class.java))
+            finish()
         }
     }
 
@@ -78,14 +75,7 @@ class GuessWordActivity : AppCompatActivity() {
     }
 
     private fun stateWord(): String {
-        val builder = StringBuilder()
-        for (i in answers.indices) {
-            builder.append(answers[i])
-            if (i < answers.size - 1) {
-                builder.append("")
-            }
-        }
-        return builder.toString()
+        return answers.joinToString(" ")
     }
 
     fun touchLetter(v: View) {
@@ -94,11 +84,13 @@ class GuessWordActivity : AppCompatActivity() {
             readLetter(letter)
             wordTV!!.text = stateWord()
             updateImage(errors)
+            v.isEnabled = false
+            v.alpha = 0.5f
 
-            // Kiểm tra thắng
             if (wordToGuess.contentEquals(String(answers))) {
-                gameOver = true  // Đặt gameOver để không cho phép tiếp tục chơi
-                winMessage.text = "YOU WIN!" // Hiển thị thông báo chiến thắng
+                gameOver = true
+                winMessage.text = "YOU WIN!"
+                wordTV!!.text = String(answers)
             } else if (errors >= 6) {
                 updateImage(7)
                 Toast.makeText(this, "You lose !!!", Toast.LENGTH_SHORT).show()
@@ -108,17 +100,5 @@ class GuessWordActivity : AppCompatActivity() {
         } else {
             Toast.makeText(this, "Game over.", Toast.LENGTH_SHORT).show()
         }
-    }
-
-    private fun newGame() {
-        errors = 0
-        letters.clear()
-        answers = CharArray(wordToGuess!!.length) { '_' }
-
-        // Cập nhật giao diện
-        wordTV!!.text = stateWord()
-        updateImage(errors)
-        winMessage.text = "" // Reset thông báo chiến thắng
-        gameOver = false
     }
 }

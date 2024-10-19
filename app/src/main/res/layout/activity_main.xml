@@ -21,9 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:text="Streak: 0"
-        android:textSize="15sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
     <ImageView
         android:id="@+id/img"
@@ -31,7 +31,7 @@
         android:layout_height="200dp"
         android:layout_below="@id/streakTV"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:src="@drawable/state0" />
 
     <TextView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/themeTV"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:text="______"
         android:textSize="25sp"
         android:textStyle="bold" />
@@ -80,6 +80,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/buttonQ"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -88,6 +89,7 @@
                 android:text="Q" />
 
             <Button
+                android:id="@+id/buttonW"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -96,6 +98,7 @@
                 android:text="W" />
 
             <Button
+                android:id="@+id/buttonE"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -104,6 +107,7 @@
                 android:text="E" />
 
             <Button
+                android:id="@+id/buttonR"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -112,6 +116,7 @@
                 android:text="R" />
 
             <Button
+                android:id="@+id/buttonT"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -120,6 +125,7 @@
                 android:text="T" />
 
             <Button
+                android:id="@+id/buttonY"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -128,6 +134,7 @@
                 android:text="Y" />
 
             <Button
+                android:id="@+id/buttonU"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -136,6 +143,7 @@
                 android:text="U" />
 
             <Button
+                android:id="@+id/buttonI"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -144,6 +152,7 @@
                 android:text="I" />
 
             <Button
+                android:id="@+id/buttonO"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -152,6 +161,7 @@
                 android:text="O" />
 
             <Button
+                android:id="@+id/buttonP"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -168,6 +178,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/buttonA"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -176,6 +187,7 @@
                 android:text="A" />
 
             <Button
+                android:id="@+id/buttonS"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -184,6 +196,7 @@
                 android:text="S" />
 
             <Button
+                android:id="@+id/buttonD"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -192,6 +205,7 @@
                 android:text="D" />
 
             <Button
+                android:id="@+id/buttonF"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -200,6 +214,7 @@
                 android:text="F" />
 
             <Button
+                android:id="@+id/buttonG"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -208,6 +223,7 @@
                 android:text="G" />
 
             <Button
+                android:id="@+id/buttonH"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -216,6 +232,7 @@
                 android:text="H" />
 
             <Button
+                android:id="@+id/buttonJ"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -224,6 +241,7 @@
                 android:text="J" />
 
             <Button
+                android:id="@+id/buttonK"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -232,6 +250,7 @@
                 android:text="K" />
 
             <Button
+                android:id="@+id/buttonL"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -248,6 +267,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/buttonZ"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -256,6 +276,8 @@
                 android:text="Z" />
 
             <Button
+                android:id="@+id/buttonX"
+
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -264,6 +286,7 @@
                 android:text="X" />
 
             <Button
+                android:id="@+id/buttonC"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -272,6 +295,7 @@
                 android:text="C" />
 
             <Button
+                android:id="@+id/buttonV"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -280,6 +304,7 @@
                 android:text="V" />
 
             <Button
+                android:id="@+id/buttonB"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -288,6 +313,7 @@
                 android:text="B" />
 
             <Button
+                android:id="@+id/buttonN"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -296,6 +322,7 @@
                 android:text="N" />
 
             <Button
+                android:id="@+id/buttonM"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
@@ -312,13 +339,16 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/playAgainButton"
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="start"
                 android:text="Play agian"
-                app:backgroundTint="#F44336" />
+                app:backgroundTint="#F44336"
+                android:textColor="#FFFFFF"
+                />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
