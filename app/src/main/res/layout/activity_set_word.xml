@@ -1,0 +1,307 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleSetWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeButton"
+        android:text="WRITE A WORD"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/wordToGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="_ _ _ _"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_below="@id/titleSetWord"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/border"
+        android:inputType="text"
+        />
+
+    <ScrollView
+        android:id="@+id/dongC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordToGuess"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="Q" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="W" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="E" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="R" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="T" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="Y" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="U" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="I" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="O" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="P" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="A" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="S" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="D" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="F" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="G" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="H" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="J" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="K" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="L" />
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="Z" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="X" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="C" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="V" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="B" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="N" />
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="35dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
+                    android:onClick="touchLetter"
+                    android:text="M" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/homeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="16dp" />
+
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:layout_below="@id/dongC"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        />
+
+    <Button
+        android:id="@+id/playButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PLAY"
+        android:layout_below="@id/deleteButton"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="#F44336"
+        android:layout_marginTop="20dp"
+        />
+</RelativeLayout>
