@@ -25,15 +25,15 @@ Hangman is a classic word guessing game where players try to guess a hidden word
 3. Run on an Android device or emulator
 
 ## How to Play
-1. Select a word category
+1. Press "Play"
 2. Guess letters by tapping the on-screen keyboard
 3. You win by guessing the word correctly
 4. You lose if the hangman drawing completes (6 wrong guesses)
 
 ## Screenshots
-- Game Screen
 - Main Menu
-- Score Screen
+- Game Screen
+- Two Players Screen
 
 ## Requirements
 - Android 6.0 or higher
