@@ -9,7 +9,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="75dp"
         android:src="@drawable/state7" />
 
     <LinearLayout
@@ -24,22 +24,22 @@
             android:id="@+id/startGameButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#F44336"
+            android:layout_marginTop="60dp"
+            android:backgroundTint= "@color/red"
             android:onClick="startGame"
             android:text="PLAY"
             android:textColor="#FFFFFF" />
 
         <Button
             android:id="@+id/twoPlayersButton"
-            android:layout_width="match_parent"
+            android:layout_width="379dp"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:layout_margin="25dp"
             android:backgroundTint="#2196F3"
             android:text="2 PLAYERS"
-            android:textColor="#FFFFFF"  />
+            android:textColor="#FFFFFF" />
 
-        <Button
+        <!--<Button
             android:id="@+id/shopButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:backgroundTint="#FF6200EE"
             android:text="SHOP"
             android:textColor="#FFFFFF" />
-
+-->
 
     </LinearLayout>
 
