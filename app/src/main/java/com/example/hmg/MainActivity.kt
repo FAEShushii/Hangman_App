@@ -24,6 +24,8 @@ class MainActivity : AppCompatActivity() {
     private var streakTV: TextView? = null
     private var themeTV: TextView? = null
     private var lastGameWon = false
+    private val usedWords = mutableSetOf<String>()
+    private val recentThemes = ArrayDeque<String>()
     private lateinit var playAgainButton: Button
     private var gameOver = false  // New variable to track game state
 
@@ -41,7 +43,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun chooseWord(): Pair<String, String> {
-        return dbHelper.getRandomThemeAndWord()
+        var (theme, word) = dbHelper.getRandomThemeAndWord()
+
+        // Kiểm tra xem theme đã được sử dụng gần đây chưa
+        while (usedWords.contains(word) || recentThemes.contains(theme)) {
+            val newPair = dbHelper.getRandomThemeAndWord()
+            theme = newPair.first
+            word = newPair.second
+        }
+
+        // Thêm theme vào danh sách đã sử dụng gần đây
+        recentThemes.add(theme)
+
+        // Giữ danh sách chỉ chứa tối đa 3 theme
+        if (recentThemes.size > 3) {
+            recentThemes.removeFirst()
+        }
+
+        // Thêm từ vào danh sách đã sử dụng
+        usedWords.add(word)
+
+        return Pair(theme, word)
     }
 
     private fun updateImage(state: Int) {
@@ -52,6 +74,7 @@ class MainActivity : AppCompatActivity() {
     fun newGame() {
         errors = 0  // Đặt lại lỗi về 0
         letters.clear()
+        usedWords.clear()
         val (theme, word) = chooseWord()
         wordSearch = word
         answers = CharArray(wordSearch!!.length) { '_' }

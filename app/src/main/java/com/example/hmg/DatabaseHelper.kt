@@ -56,7 +56,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         onCreate(db)
     }
 
-    /*private fun insertInitialData(db: SQLiteDatabase) {
+    private fun insertInitialData(db: SQLiteDatabase) {
         val themes = mapOf(
             "Fruits" to arrayOf("APPLE", "MANGO", "PEAR", "GRAPE", "KIWI"),
             "Animals" to arrayOf("DOG", "CAT", "BIRD", "FISH", "LION"),
@@ -97,7 +97,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
                 db.insert(TABLE_WORDS, null, wordValues)
             }
         }
-    }*/
+    }
 
     fun getRandomThemeAndWord(): Pair<String, String> {
         val db = this.readableDatabase
