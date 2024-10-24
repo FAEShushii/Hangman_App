@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var answers: CharArray
     var errors = 0
     var streak = 0
+    private lateinit var dbHelper: DatabaseHelper
     private val letters = ArrayList<String>()
     private var image: ImageView? = null
     private var wordTV: TextView? = null
@@ -29,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        dbHelper = DatabaseHelper(this)
         image = findViewById(R.id.img)
         wordTV = findViewById(R.id.wordTV)
         searchTV = findViewById(R.id.searchTV)
@@ -39,9 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun chooseWord(): Pair<String, String> {
-        val theme = themes.keys.toList()[random.nextInt(themes.size)]
-        val word = themes[theme]!![random.nextInt(3)]
-        return Pair(theme, word)
+        return dbHelper.getRandomThemeAndWord()
     }
 
     private fun updateImage(state: Int) {
@@ -117,9 +117,15 @@ class MainActivity : AppCompatActivity() {
             v.alpha = 0.5f // Giảm độ sáng nút
 
             if (wordSearch.contentEquals(String(answers))) {
-                Toast.makeText(this, "YOU WIN!", Toast.LENGTH_SHORT).show()
-                searchTV!!.text = "YOU WIN! " + searchTV!!.text
                 streak++
+                // Update win message based on streak
+                val winMessage = when {
+                    streak >= 6 -> "MASTER"
+                    streak >= 3 -> "AMAZING"
+                    else -> "YOU WIN!"
+                }
+                Toast.makeText(this, winMessage, Toast.LENGTH_SHORT).show()
+                searchTV!!.text = "$winMessage " + searchTV!!.text
                 streakTV!!.text = "Streak: $streak"
                 lastGameWon = true
                 wordTV!!.text = String(answers)
@@ -127,19 +133,19 @@ class MainActivity : AppCompatActivity() {
                 gameOver = true  // Đánh dấu trò chơi đã kết thúc
             } else if (errors >= 6) {
                 updateImage(7)
-                Toast.makeText(this, "You lose !!!", Toast.LENGTH_SHORT).show()
                 wordTV!!.text = wordSearch
                 streak = 0
                 streakTV!!.text = "Streak: $streak"
                 lastGameWon = false
                 gameOver = true  // Đánh dấu trò chơi đã kết thúc
-
+                searchTV!!.text = "You lose !!!" + searchTV!!.text
                 playAgainButton.text = "Play Again"
             }
         } else {
             Toast.makeText(this, "Game over.", Toast.LENGTH_SHORT).show()
         }
     }
+
 
     fun start(view: View?) {
         newGame()
@@ -150,31 +156,5 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, IntroActivity::class.java)
         startActivity(intent)
         finish()
-    }
-
-    companion object {
-        val themes = mapOf(
-            "Fruits" to arrayOf("APPLE", "BANANA", "ORANGE"),
-            "Animals" to arrayOf("ELEPHANT", "GIRAFFE", "PENGUIN"),
-            "Countries" to arrayOf("FRANCE", "BRAZIL", "JAPAN"),
-            "Sports" to arrayOf("FOOTBALL", "TENNIS", "SWIMMING"),
-            "Colors" to arrayOf("PURPLE", "YELLOW", "INDIGO"),
-            "Professions" to arrayOf("DOCTOR", "TEACHER", "ENGINEER"),
-            "Vehicles" to arrayOf("CAR", "AIRPLANE", "BICYCLE"),
-            "Weather" to arrayOf("RAIN", "SNOW", "THUNDER"),
-            "Emotions" to arrayOf("HAPPY", "ANGRY", "EXCITED"),
-            "Body" to arrayOf("HAND", "EYE", "HEART"),
-            "Music" to arrayOf("GUITAR", "PIANO", "VIOLIN"),
-            "Food" to arrayOf("PIZZA", "SUSHI", "BURGER"),
-            "Clothing" to arrayOf("SHIRT", "PANTS", "SHOES"),
-            "Plants" to arrayOf("ROSE", "CACTUS", "FERN"),
-            "Space" to arrayOf("PLANET", "STAR", "COMET"),
-            "Technology" to arrayOf("COMPUTER", "SMARTPHONE", "ROBOT"),
-            "Literature" to arrayOf("NOVEL", "POETRY", "DRAMA"),
-            "Ocean" to arrayOf("WHALE", "CORAL", "WAVE"),
-            "Art" to arrayOf("PAINTING", "SCULPTURE", "DANCE"),
-            "Time" to arrayOf("MINUTE", "CENTURY", "MOMENT")
-        )
-        val random = Random()
     }
 }
