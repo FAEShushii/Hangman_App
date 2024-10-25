@@ -9,14 +9,12 @@ Hangman is a classic word guessing game where players try to guess a hidden word
 - Multiple word categories (Animals, Food, Technology, ...)
 - Score tracking
 - Simple and intuitive UI
-- Sound effects
 - Offline gameplay
 
 ## Technologies
 - Kotlin
 - Android SDK
-- MVVM Architecture
-- Room Database
+- SQLite Database
 - Material Design Components
 
 ## Installation
@@ -31,13 +29,10 @@ Hangman is a classic word guessing game where players try to guess a hidden word
 4. You lose if the hangman drawing completes (6 wrong guesses)
 
 ## Screenshots
-- Main Menu
+- Intro Menu
 - Game Screen
-- Two Players Screen
-
-## Requirements
-- Android 6.0 or higher
-- Minimum storage: 50MB
+- Two Players Set Word Screen
+- Two Players Guess Word Screen
 
 
 Feel free to report any bugs or suggest features by creating an issue in the repository.
