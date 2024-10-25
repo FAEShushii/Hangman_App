@@ -21,6 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="_ _ _ _"
+        android:textColorHint="@color/white"
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -57,7 +58,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="Q" />
+                    android:text="Q"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -65,7 +67,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="W" />
+                    android:text="W"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -73,7 +76,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="E" />
+                    android:text="E"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -81,7 +85,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="R" />
+                    android:text="R"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -89,7 +94,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="T" />
+                    android:text="T"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -97,7 +103,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="Y" />
+                    android:text="Y"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -105,7 +112,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="U" />
+                    android:text="U"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -113,7 +121,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="I" />
+                    android:text="I"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -121,7 +130,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="O" />
+                    android:text="O"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -129,7 +139,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="P" />
+                    android:text="P"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
@@ -144,7 +155,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="A" />
+                    android:text="A"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -152,7 +164,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="S" />
+                    android:text="S"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -160,7 +173,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="D" />
+                    android:text="D"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -168,7 +182,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="F" />
+                    android:text="F"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -176,7 +191,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="G" />
+                    android:text="G"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -184,7 +200,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="H" />
+                    android:text="H"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -192,7 +209,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="J" />
+                    android:text="J"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -200,7 +218,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="K" />
+                    android:text="K"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -208,11 +227,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="L" />
+                    android:text="L"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -224,7 +243,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="Z" />
+                    android:text="Z"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -232,7 +252,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="X" />
+                    android:text="X"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -240,7 +261,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="C" />
+                    android:text="C"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -248,7 +270,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="V" />
+                    android:text="V"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -256,7 +279,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="B" />
+                    android:text="B"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -264,7 +288,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="N" />
+                    android:text="N"
+                    android:textColor="@color/white"/>
 
                 <Button
                     style="?android:attr/buttonBarButtonStyle"
@@ -272,20 +297,25 @@
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="M" />
+                    android:text="M"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
 
+
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="15dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/home_button_background"
+        android:drawableTop="@drawable/ic_home"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        />
 
 
     <Button

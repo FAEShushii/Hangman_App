@@ -9,26 +9,31 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/state7" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/hangmanImage"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="70dp"
         android:gravity="center"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/startGameButton"
-            android:layout_width="match_parent"
+            android:id="@+id/startGame"
+            android:layout_width="379dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:backgroundTint= "@color/red"
-            android:onClick="startGame"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/red"
+            android:drawablePadding="8dp"
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"
             android:text="PLAY"
-            android:textColor="#FFFFFF" />
+            android:onClick="startGame"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/twoPlayersButton"
@@ -37,6 +42,8 @@
             android:layout_margin="25dp"
             android:backgroundTint="#2196F3"
             android:text="2 PLAYERS"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:textColor="#FFFFFF" />
 
         <!--<Button

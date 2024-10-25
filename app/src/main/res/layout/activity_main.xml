@@ -7,15 +7,20 @@
     android:paddingBottom="10dp"
     tools:context=".MainActivity">
 
+
     <Button
         android:id="@+id/backButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:text="Home"
-        android:onClick="goToIntro" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/home_button_background"
+        android:drawableTop="@drawable/ic_home"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        />
+
 
     <TextView
         android:id="@+id/streakTV"
@@ -91,7 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="Q" />
+                android:text="Q"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonW"
@@ -100,7 +106,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="W" />
+                android:text="W"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonE"
@@ -109,7 +116,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="E" />
+                android:text="E"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonR"
@@ -118,7 +126,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="R" />
+                android:text="R"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonT"
@@ -127,7 +136,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="T" />
+                android:text="T"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonY"
@@ -136,7 +146,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="Y" />
+                android:text="Y"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonU"
@@ -145,7 +156,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="U" />
+                android:text="U"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonI"
@@ -154,7 +166,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="I" />
+                android:text="I"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonO"
@@ -163,7 +176,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="O" />
+                android:text="O"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonP"
@@ -172,7 +186,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="P" />
+                android:text="P"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -189,7 +204,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="A" />
+                android:text="A"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonS"
@@ -198,7 +214,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="S" />
+                android:text="S"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonD"
@@ -207,7 +224,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="D" />
+                android:text="D"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonF"
@@ -216,7 +234,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="F" />
+                android:text="F"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonG"
@@ -225,7 +244,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="G" />
+                android:text="G"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonH"
@@ -234,7 +254,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="H" />
+                android:text="H"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonJ"
@@ -243,7 +264,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="J" />
+                android:text="J"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonK"
@@ -252,7 +274,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="K" />
+                android:text="K"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonL"
@@ -261,7 +284,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="L" />
+                android:text="L"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout
@@ -278,17 +302,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="Z" />
+                android:text="Z"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonX"
-
                 style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="35dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="X" />
+                android:text="X"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonC"
@@ -297,7 +322,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="C" />
+                android:text="C"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonV"
@@ -306,7 +332,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="V" />
+                android:text="V"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonB"
@@ -315,7 +342,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="B" />
+                android:text="B"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonN"
@@ -324,7 +352,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="N" />
+                android:text="N"
+                android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/buttonM"
@@ -333,7 +362,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="touchLetter"
-                android:text="M" />
+                android:text="M"
+                android:textColor="@color/white" />
         </LinearLayout>
 
         <LinearLayout

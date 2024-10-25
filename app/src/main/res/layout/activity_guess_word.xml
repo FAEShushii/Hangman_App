@@ -9,12 +9,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/homeButton"
-        android:text="GUESS THE WORD"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor= "@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:text="GUESS THE WORD"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/img"
@@ -29,14 +29,13 @@
         android:id="@+id/wordToGuess"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="_____"
-        android:textColor= "@color/white"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:gravity="center"
         android:layout_below="@id/img"
         android:layout_marginTop="20dp"
-        />
+        android:gravity="center"
+        android:text="_____"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/winMessage"
@@ -44,11 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/wordToGuess"
         android:layout_centerHorizontal="true"
-        android:text=""
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:layout_marginTop="16dp"
-        android:textColor="#4CAF50" />
+        android:text=""
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -60,8 +59,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -69,94 +68,94 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonQ"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="Q" />
+                    android:text="Q"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonW"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="W" />
+                    android:text="W"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonE"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="E" />
+                    android:text="E"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonR"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="R" />
+                    android:text="R"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonT"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="T" />
+                    android:text="T"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonY"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="Y" />
+                    android:text="Y"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonU"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="U" />
+                    android:text="U"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonI"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="I" />
+                    android:text="I"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonO"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="O" />
+                    android:text="O"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonP"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="P" />
+                    android:text="P"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
@@ -166,176 +165,179 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonA"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="A" />
+                    android:text="A"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonS"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="S" />
+                    android:text="S"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonD"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="D" />
+                    android:text="D"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonF"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="F" />
+                    android:text="F"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonG"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="G" />
+                    android:text="G"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonH"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="H" />
+                    android:text="H"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonJ"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="J" />
+                    android:text="J"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonK"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="K" />
+                    android:text="K"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonL"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="L" />
+                    android:text="L"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/buttonZ"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="Z" />
+                    android:text="Z"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonX"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="X" />
+                    android:text="X"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonC"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="C" />
+                    android:text="C"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonV"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="V" />
+                    android:text="V"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonB"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="B" />
+                    android:text="B"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonN"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="N" />
+                    android:text="N"
+                    android:textColor="@color/white"/>
 
                 <Button
-                    android:id="@+id/buttonM"
                     style="?android:attr/buttonBarButtonStyle"
                     android:layout_width="35dp"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
                     android:onClick="touchLetter"
-                    android:text="M" />
+                    android:text="M"
+                    android:textColor="@color/white"/>
             </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
+
     <Button
         android:id="@+id/homeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Home"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="16dp" />
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/home_button_background"
+        android:drawableTop="@drawable/ic_home"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+    />
+
 
     <Button
         android:id="@+id/playAgainButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play Again"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:backgroundTint="#F44336"/>
+        android:backgroundTint="#F44336"
+        android:text="Play Again" />
 </RelativeLayout>

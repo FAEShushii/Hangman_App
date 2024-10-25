@@ -27,6 +27,8 @@ class MainActivity : AppCompatActivity() {
     private val usedWords = mutableSetOf<String>()
     private val recentThemes = ArrayDeque<String>()
     private lateinit var playAgainButton: Button
+    private lateinit var backButton: Button
+
     private var gameOver = false  // New variable to track game state
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +41,14 @@ class MainActivity : AppCompatActivity() {
         streakTV = findViewById(R.id.streakTV)
         themeTV = findViewById(R.id.themeTV)
         playAgainButton = findViewById(R.id.playAgainButton)
+        backButton = findViewById(R.id.backButton)
         newGame()
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, IntroActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     private fun chooseWord(): Pair<String, String> {
@@ -175,9 +184,4 @@ class MainActivity : AppCompatActivity() {
         playAgainButton.text = "Play Again"
     }
 
-    fun goToIntro(view: android.view.View) {
-        val intent = Intent(this, IntroActivity::class.java)
-        startActivity(intent)
-        finish()
-    }
 }
