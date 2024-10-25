@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class SetWordActivity : AppCompatActivity() {
@@ -31,16 +32,25 @@ class SetWordActivity : AppCompatActivity() {
         // Thiết lập nút Play
         playButton.setOnClickListener {
             word = wordToGuess.text.toString().uppercase()
-            if (word.isNullOrEmpty()) {
-                // Hiển thị thông báo nếu không có từ nhập vào
-                wordToGuess.setError("Please enter a word!")
-            } else {
-                // Chuyển sang GuessWordActivity với từ đã nhập
-                val intent = Intent(this, GuessWordActivity::class.java).apply {
-                    putExtra("WORD_TO_GUESS", word)
+
+            when {
+                word.isNullOrEmpty() -> {
+                    // Hiển thị thông báo nếu không có từ nhập vào
+                    Toast.makeText(this, "Please enter a word!", Toast.LENGTH_SHORT).show()
+                    wordToGuess.setError("")
                 }
-                startActivity(intent)
-                finish()
+                word!!.length > 10 -> {
+                    // Hiển thị thông báo nếu từ quá dài
+                    Toast.makeText(this, "Exceeded the maximum allowed length!", Toast.LENGTH_SHORT).show()
+                }
+                else -> {
+                    // Chuyển sang GuessWordActivity với từ đã nhập
+                    val intent = Intent(this, GuessWordActivity::class.java).apply {
+                        putExtra("WORD_TO_GUESS", word)
+                    }
+                    startActivity(intent)
+                    finish()
+                }
             }
         }
 

@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
     android:padding="16dp">
 
     <TextView
@@ -11,6 +12,7 @@
         android:text="GUESS THE WORD"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor= "@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
@@ -28,6 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="_____"
+        android:textColor= "@color/white"
         android:textSize="25dp"
         android:textStyle="bold"
         android:gravity="center"
@@ -51,7 +54,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/wordToGuess"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:layout_marginBottom="20dp">
 
         <LinearLayout
@@ -333,6 +336,6 @@
         android:text="Play Again"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#F44336"/>
 </RelativeLayout>

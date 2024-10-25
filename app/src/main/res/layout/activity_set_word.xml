@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
     android:padding="16dp">
 
     <TextView
@@ -11,6 +12,7 @@
         android:text="WRITE A WORD"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:textColor= "@color/white"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp" />
 
@@ -22,10 +24,12 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:gravity="center"
+        android:textColor= "@color/white"
         android:layout_below="@id/titleSetWord"
         android:layout_marginTop="50dp"
         android:background="@drawable/border"
-        android:inputType="text"
+        android:focusable="false"
+        android:clickable="false"
         />
 
     <ScrollView

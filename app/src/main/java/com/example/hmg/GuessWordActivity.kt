@@ -38,6 +38,7 @@ class GuessWordActivity : AppCompatActivity() {
         // Khởi tạo các nút
         homeButton = findViewById(R.id.homeButton)
         playAgainButton = findViewById(R.id.playAgainButton)
+        playAgainButton.visibility = View.GONE
 
         // Thiết lập sự kiện cho nút Home
         homeButton.setOnClickListener {
@@ -91,11 +92,13 @@ class GuessWordActivity : AppCompatActivity() {
                 gameOver = true
                 winMessage.text = "YOU WIN!"
                 wordTV!!.text = String(answers)
+                playAgainButton.visibility = View.VISIBLE
             } else if (errors >= 6) {
                 updateImage(7)
                 Toast.makeText(this, "You lose !!!", Toast.LENGTH_SHORT).show()
                 wordTV!!.text = wordToGuess
                 gameOver = true
+                playAgainButton.visibility = View.VISIBLE
             }
         } else {
             Toast.makeText(this, "Game over.", Toast.LENGTH_SHORT).show()
