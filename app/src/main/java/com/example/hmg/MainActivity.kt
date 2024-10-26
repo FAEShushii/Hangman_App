@@ -172,7 +172,7 @@ class MainActivity : AppCompatActivity() {
                 hideLetterButtons()  // Ẩn các nút chữ cái
                 gameOver = true
             } else if (errors >= 6) {
-                updateImage(7)
+                updateImage(6)
                 wordTV!!.text = wordSearch
                 streak = 0
                 streakTV!!.text = "Streak: $streak"

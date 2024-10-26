@@ -97,7 +97,7 @@ class GuessWordActivity : AppCompatActivity() {
                 wordTV!!.text = String(answers)
                 playAgainButton.visibility = View.VISIBLE
             } else if (errors >= 6) {
-                updateImage(7)
+                updateImage(6)
                 Toast.makeText(this, "You lose !!!", Toast.LENGTH_SHORT).show()
                 wordTV!!.text = wordToGuess
                 gameOver = true
