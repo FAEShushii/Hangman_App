@@ -43,7 +43,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_margin="25dp"
-            android:backgroundTint="#2196F3"
+            android:backgroundTint="@color/light_blue"
             android:text="2 PLAYERS"
             android:textStyle="bold"
             android:textSize="18sp"

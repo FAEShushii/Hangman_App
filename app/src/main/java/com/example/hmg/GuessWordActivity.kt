@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,11 +21,13 @@ class GuessWordActivity : AppCompatActivity() {
     private var gameOver = false
     private lateinit var homeButton: Button
     private lateinit var playAgainButton: Button
+    private lateinit var titleGuessWord: LinearLayout // Thêm biến LinearLayout cho tiêu đề
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_guess_word)
 
+        titleGuessWord = findViewById(R.id.titleGuessWord) // Khởi tạo LinearLayout cho tiêu đề
         image = findViewById(R.id.img)
         wordTV = findViewById(R.id.wordToGuess)
         winMessage = findViewById(R.id.winMessage)

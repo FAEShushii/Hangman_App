@@ -14,6 +14,7 @@
     <color name="yellow">#FFFFFF00</color>
     <color name="green">#FF00FF00</color>
     <color name="blue">#FF0000FF</color>
+    <color name="light_blue">#2196F3</color>
     <color name="indigo">#FF4B0082</color>
     <color name="violet">#FF8F00FF</color>
 </resources>

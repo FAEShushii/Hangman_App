@@ -5,12 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class SetWordActivity : AppCompatActivity() {
-    private lateinit var titleSetWord: TextView
+    private lateinit var titleSetWord: LinearLayout
     private lateinit var wordToGuess: EditText
     private lateinit var deleteButton: Button
     private lateinit var playButton: Button

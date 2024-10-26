@@ -4,17 +4,25 @@
     android:background="@drawable/bg_main"
     android:padding="16dp">
 
-    <TextView
+    <LinearLayout
         android:id="@+id/titleSetWord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/homeButton"
-        android:text="WRITE A WORD"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor= "@color/white"
+        android:background="@drawable/ic_frame"
+        android:padding="16dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp" />
+        android:layout_below="@id/homeButton"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WRITE A WORD"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center" />
+    </LinearLayout>
 
     <EditText
         android:id="@+id/wordToGuess"
