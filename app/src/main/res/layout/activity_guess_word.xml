@@ -336,8 +336,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:drawableEnd="@drawable/ic_play_again"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#F44336"
-        android:text="Play Again" />
+        android:text="Play Again"
+        android:textStyle="bold"
+        android:gravity="center"/>
 </RelativeLayout>

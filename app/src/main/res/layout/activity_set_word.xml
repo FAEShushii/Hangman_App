@@ -320,19 +320,23 @@
 
     <Button
         android:id="@+id/deleteButton"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="Delete"
+        android:drawableEnd="@drawable/ic_delete"
         android:layout_below="@id/dongC"
         android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
         android:layout_marginTop="75dp"
         />
 
     <Button
         android:id="@+id/playButton"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:text="PLAY"
+        android:drawableEnd="@drawable/ic_play"
         android:layout_below="@id/deleteButton"
         android:layout_centerHorizontal="true"
         android:backgroundTint="#F44336"

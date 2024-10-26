@@ -1,6 +1,7 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval">
+            <solid android:color="@color/red"/>
             <stroke
                 android:width="2dp"
                 android:color="#000000" /> <!-- Đường viền màu đen -->

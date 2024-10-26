@@ -376,14 +376,18 @@
             <Button
                 android:id="@+id/playAgainButton"
                 style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="120dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="2dp"
                 android:onClick="start"
-                android:text="Play agian"
+                android:drawableEnd="@drawable/ic_play_again"
+                android:drawablePadding="4dp"
                 app:backgroundTint="#F44336"
                 android:textColor="#FFFFFF"
-                />
+                android:text="Play Again"
+                android:textStyle="bold"
+                android:gravity="center_vertical" />
+
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
