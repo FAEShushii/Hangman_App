@@ -38,7 +38,6 @@ class SetWordActivity : AppCompatActivity() {
                 word.isNullOrEmpty() -> {
                     // Hiển thị thông báo nếu không có từ nhập vào
                     Toast.makeText(this, "Please enter a word!", Toast.LENGTH_SHORT).show()
-                    wordToGuess.setError("")
                 }
                 word!!.length > 10 -> {
                     // Hiển thị thông báo nếu từ quá dài

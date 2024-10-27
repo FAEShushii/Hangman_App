@@ -156,6 +156,7 @@ class MainActivity : AppCompatActivity() {
             if (wordSearch.contentEquals(String(answers))) {
                 streak++
                 val winMessage = when {
+                    streak >= 8 -> "INCREDIBLE"
                     streak >= 6 -> "MASTER"
                     streak >= 3 -> "AMAZING"
                     else -> "YOU WIN!"
