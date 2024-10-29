@@ -89,7 +89,7 @@ class GuessWordActivity : AppCompatActivity() {
             wordTV!!.text = stateWord()
             updateImage(errors)
             v.isEnabled = false
-            v.alpha = 0.5f
+            v.alpha = 0.1f
 
             if (wordToGuess.contentEquals(String(answers))) {
                 gameOver = true

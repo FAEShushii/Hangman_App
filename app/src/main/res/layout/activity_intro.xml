@@ -49,15 +49,15 @@
             android:textSize="18sp"
             android:textColor="#FFFFFF" />
 
-        <!--<Button
-            android:id="@+id/shopButton"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/rankButton"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:backgroundTint="#FF6200EE"
-            android:text="SHOP"
+            android:backgroundTint="@color/orange"
+            android:text="RANKING"
+            android:textStyle="bold"
+            android:textSize="18sp"
             android:textColor="#FFFFFF" />
--->
 
     </LinearLayout>
 

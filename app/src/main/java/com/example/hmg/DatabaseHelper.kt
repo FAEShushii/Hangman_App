@@ -8,17 +8,21 @@ import android.database.sqlite.SQLiteOpenHelper
 class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
-        private const val DATABASE_NAME = "hangman1.db"
+        private const val DATABASE_NAME = "hg1.db"
         private const val DATABASE_VERSION = 1
 
         // Table names
         private const val TABLE_THEMES = "themes"
         private const val TABLE_WORDS = "words"
+        private const val TABLE_HIGH_SCORES = "high_scores"
 
         // Common column names
         private const val KEY_ID = "id"
         private const val KEY_THEME_NAME = "theme_name"
         private const val KEY_WORD = "word"
+        private const val KEY_PLAYER_NAME = "player_name" // Thêm cột mới
+        private const val KEY_STREAK = "streak" // Thêm cột mới
+        private const val KEY_DATE = "date" // Thêm cột mới
     }
 
     override fun onCreate(db: SQLiteDatabase) {
@@ -40,8 +44,18 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
             )
         """.trimIndent()
 
+        val createHighScoresTable = """
+            CREATE TABLE $TABLE_HIGH_SCORES (
+                $KEY_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+                $KEY_PLAYER_NAME TEXT,
+                $KEY_STREAK INTEGER,
+                $KEY_DATE TEXT
+            )
+        """.trimIndent()
+
         db.execSQL(createThemesTable)
         db.execSQL(createWordsTable)
+        db.execSQL(createHighScoresTable)
 
         // Insert initial data
         /*insertInitialData(db)*/
@@ -51,6 +65,7 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         // Drop older tables if existed
         db.execSQL("DROP TABLE IF EXISTS $TABLE_WORDS")
         db.execSQL("DROP TABLE IF EXISTS $TABLE_THEMES")
+        db.execSQL("DROP TABLE IF EXISTS $TABLE_HIGH_SCORES")
 
         // Create tables again
         onCreate(db)
@@ -120,5 +135,51 @@ class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME
         wordCursor.close()
 
         return Pair(theme, word)
+    }
+
+    // Thêm function để lưu high score
+    fun saveHighScore(playerName: String, streak: Int) {
+        val db = this.writableDatabase
+        val values = ContentValues().apply {
+            put(KEY_PLAYER_NAME, playerName)
+            put(KEY_STREAK, streak)
+            put(KEY_DATE, System.currentTimeMillis().toString())
+        }
+        db.insert(TABLE_HIGH_SCORES, null, values)
+        db.close()
+    }
+
+    // Thêm function để lấy top high scores
+    fun getTopHighScores(limit: Int = 10): List<Triple<String, Int, String>> {
+        val scores = mutableListOf<Triple<String, Int, String>>()
+        val db = this.readableDatabase
+
+        try {
+            val cursor = db.query(
+                TABLE_HIGH_SCORES,
+                arrayOf(KEY_PLAYER_NAME, KEY_STREAK, KEY_DATE),
+                null,
+                null,
+                null,
+                null,
+                "$KEY_STREAK DESC",
+                limit.toString()
+            )
+
+            if (cursor?.count ?: 0 > 0) {
+                cursor.moveToFirst()
+                do {
+                    val name = cursor.getString(cursor.getColumnIndexOrThrow(KEY_PLAYER_NAME))
+                    val streak = cursor.getInt(cursor.getColumnIndexOrThrow(KEY_STREAK))
+                    val date = cursor.getString(cursor.getColumnIndexOrThrow(KEY_DATE))
+                    scores.add(Triple(name, streak, date))
+                } while (cursor.moveToNext())
+            }
+            cursor?.close()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
+        return scores
     }
 }

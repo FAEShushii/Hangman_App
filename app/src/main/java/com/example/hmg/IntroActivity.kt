@@ -16,6 +16,12 @@ class IntroActivity : AppCompatActivity() {
             startActivity(intent)
             finish() // Để không quay lại màn hình giới thiệu khi nhấn nút back
         }
+        val rankButton : Button = findViewById(R.id.rankButton)
+        rankButton.setOnClickListener{
+            val intent = Intent(this, RankActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 
     fun startGame(view: android.view.View) {

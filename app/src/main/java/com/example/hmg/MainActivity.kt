@@ -6,10 +6,12 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import java.util.Random
 
@@ -142,6 +144,27 @@ class MainActivity : AppCompatActivity() {
         return builder.toString()
     }
 
+    private fun showHighScoreDialog() {
+        val dialog = AlertDialog.Builder(this)
+        val dialogView = layoutInflater.inflate(R.layout.dialog_high_score, null)
+        val editTextName = dialogView.findViewById<EditText>(R.id.editTextName)
+
+        dialog.setView(dialogView)
+            .setTitle("New High Score!")
+            .setMessage("You achieved a streak of $streak! Enter your name:")
+            .setPositiveButton("Save") { _, _ ->
+                val playerName = editTextName.text.toString()
+                if (playerName.isNotEmpty()) {
+                    dbHelper.saveHighScore(playerName, streak)
+                    Toast.makeText(this, "Score saved!", Toast.LENGTH_SHORT).show()
+                }
+            }
+            .setNegativeButton("Cancel") { dialog, _ ->
+                dialog.cancel()
+            }
+            .show()
+    }
+
     @RequiresApi(Build.VERSION_CODES.M)
     fun touchLetter(v: View) {
         if (!gameOver) {
@@ -151,7 +174,7 @@ class MainActivity : AppCompatActivity() {
             updateImage(errors)
 
             v.isEnabled = false
-            v.alpha = 0.5f
+            v.alpha = 0.1f
 
             if (wordSearch.contentEquals(String(answers))) {
                 streak++
@@ -173,6 +196,9 @@ class MainActivity : AppCompatActivity() {
                 hideLetterButtons()  // Ẩn các nút chữ cái
                 gameOver = true
             } else if (errors >= 6) {
+                if (streak > 3) {
+                    showHighScoreDialog()
+                }
                 updateImage(6)
                 wordTV!!.text = wordSearch
                 streak = 0
