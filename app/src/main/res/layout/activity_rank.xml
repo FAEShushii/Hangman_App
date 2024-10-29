@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_main">
+    android:background="@drawable/bg_ranking">
 
     <Button
         android:id="@+id/backButton"
@@ -16,6 +16,7 @@
         android:background="@drawable/home_button_background"
         android:drawableTop="@drawable/ic_home"
         android:padding="10dp"
+        app:backgroundTint="@color/blue"
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_main"
     android:padding="16dp">
 
@@ -328,17 +329,17 @@
         </LinearLayout>
     </ScrollView>
 
+
     <Button
         android:id="@+id/homeButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_gravity="center"
         android:background="@drawable/home_button_background"
+        app:backgroundTint="@color/blue"
         android:drawableTop="@drawable/ic_home"
         android:padding="10dp"
-        android:layout_gravity="center"
-        android:scaleType="centerInside"
-    />
-
+        android:scaleType="centerInside" />
 
     <Button
         android:id="@+id/playAgainButton"

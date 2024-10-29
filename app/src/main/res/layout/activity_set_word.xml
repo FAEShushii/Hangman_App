@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bg_main"
     android:padding="16dp">
 
@@ -318,6 +319,7 @@
         android:layout_marginTop="15dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        app:backgroundTint="@color/blue"
         android:background="@drawable/home_button_background"
         android:drawableTop="@drawable/ic_home"
         android:padding="10dp"

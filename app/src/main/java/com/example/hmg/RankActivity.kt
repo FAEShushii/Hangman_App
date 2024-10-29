@@ -37,7 +37,7 @@ class RankActivity : AppCompatActivity() {
     private fun initializeViews() {
         dbHelper = DatabaseHelper(this)
         recyclerView = findViewById(R.id.rankingRecyclerView)
-        backButton = findViewById(R.id.backButton) // Đảm bảo ID này tồn tại trong activity_rank.xml
+        backButton = findViewById(R.id.backButton)
     }
 
     private fun setupRecyclerView() {
@@ -45,7 +45,9 @@ class RankActivity : AppCompatActivity() {
         val rankings = dbHelper.getTopHighScores()
 
         if (rankings.isNotEmpty()) {
-            adapter = RankingAdapter(rankings)
+            // Lấy top 5 người chơi có streak cao nhất
+            val top5Rankings = rankings.sortedByDescending { it.second }.take(5)
+            adapter = RankingAdapter(top5Rankings)
             recyclerView.adapter = adapter
         } else {
             // Có thể thêm xử lý khi không có dữ liệu
@@ -82,13 +84,14 @@ class RankingAdapter(private val rankings: List<Triple<String, Int, String>>) :
         holder.playerNameTextView.text = playerName
         holder.streakTextView.text = "Streak: $streak"
 
-        // Đặt màu nền dựa trên vị trí
-        when (position) {
-            0 -> holder.rankTextView.setBackgroundColor(Color.YELLOW) // Màu vàng cho hạng #1
-            1 -> holder.rankTextView.setBackgroundColor(Color.LTGRAY) // Màu bạc cho hạng #2
-            2 -> holder.rankTextView.setBackgroundColor(0xFFA0522D.toInt()) // Màu nâu đồng cho hạng #3
-            else -> holder.rankTextView.setBackgroundColor(Color.TRANSPARENT) // Không đổi màu cho hạng #4 trở đi
+        // Đặt màu nền của toàn bộ item dựa trên vị trí
+        val backgroundColor = when (position) {
+            0 -> Color.rgb(255, 215, 0) // Màu vàng cho hạng #1
+            1 -> Color.LTGRAY // Màu bạc cho hạng #2
+            2 -> 0xFFA0522D.toInt() // Màu nâu đồng cho hạng #3
+            else -> Color.rgb(100, 149, 237) // Không đổi màu cho hạng #4 trở đi
         }
+        holder.itemView.setBackgroundColor(backgroundColor)
     }
 
     override fun getItemCount() = rankings.size
