@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity() {
                 val winMessage = when {
                     streak >= 8 -> "INCREDIBLE"
                     streak >= 6 -> "MASTER"
-                    streak >= 3 -> "AMAZING"
+                    streak >= 2 -> "AMAZING"
                     else -> "YOU WIN!"
                 }
                 Toast.makeText(this, winMessage, Toast.LENGTH_SHORT).show()
@@ -198,7 +198,7 @@ class MainActivity : AppCompatActivity() {
                 hideLetterButtons()  // Ẩn các nút chữ cái
                 gameOver = true
             } else if (errors >= 6) {
-                if (currentStreak > 3) {  // Use currentStreak instead of streak
+                if (currentStreak >= 2) {  // Use currentStreak instead of streak
                     showHighScoreDialog(currentStreak)  // Pass the currentStreak to the dialog
                 }
                 updateImage(6)
