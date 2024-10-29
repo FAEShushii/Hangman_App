@@ -151,7 +151,7 @@ class MainActivity : AppCompatActivity() {
         val editTextName = dialogView.findViewById<EditText>(R.id.editTextName)
 
         dialog.setView(dialogView)
-            .setTitle("New High Score!")
+            .setTitle("Congratulations! Enter Your Name")
             .setMessage("You achieved a streak of $finalStreak! Enter your name:")  // Use finalStreak instead of streak
             .setPositiveButton("Save") { _, _ ->
                 val playerName = editTextName.text.toString()
