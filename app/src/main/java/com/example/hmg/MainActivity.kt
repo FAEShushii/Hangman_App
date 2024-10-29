@@ -144,18 +144,19 @@ class MainActivity : AppCompatActivity() {
         return builder.toString()
     }
 
-    private fun showHighScoreDialog() {
+    private var currentStreak = 0
+    private fun showHighScoreDialog(finalStreak: Int) {  // Add parameter for the final streak
         val dialog = AlertDialog.Builder(this)
         val dialogView = layoutInflater.inflate(R.layout.dialog_high_score, null)
         val editTextName = dialogView.findViewById<EditText>(R.id.editTextName)
 
         dialog.setView(dialogView)
             .setTitle("New High Score!")
-            .setMessage("You achieved a streak of $streak! Enter your name:")
+            .setMessage("You achieved a streak of $finalStreak! Enter your name:")  // Use finalStreak instead of streak
             .setPositiveButton("Save") { _, _ ->
                 val playerName = editTextName.text.toString()
                 if (playerName.isNotEmpty()) {
-                    dbHelper.saveHighScore(playerName, streak)
+                    dbHelper.saveHighScore(playerName, finalStreak)  // Save the finalStreak
                     Toast.makeText(this, "Score saved!", Toast.LENGTH_SHORT).show()
                 }
             }
@@ -178,6 +179,7 @@ class MainActivity : AppCompatActivity() {
 
             if (wordSearch.contentEquals(String(answers))) {
                 streak++
+                currentStreak = streak
                 val winMessage = when {
                     streak >= 8 -> "INCREDIBLE"
                     streak >= 6 -> "MASTER"
@@ -196,8 +198,8 @@ class MainActivity : AppCompatActivity() {
                 hideLetterButtons()  // Ẩn các nút chữ cái
                 gameOver = true
             } else if (errors >= 6) {
-                if (streak > 3) {
-                    showHighScoreDialog()
+                if (currentStreak > 3) {  // Use currentStreak instead of streak
+                    showHighScoreDialog(currentStreak)  // Pass the currentStreak to the dialog
                 }
                 updateImage(6)
                 wordTV!!.text = wordSearch

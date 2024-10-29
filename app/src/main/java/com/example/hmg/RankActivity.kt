@@ -1,6 +1,7 @@
 package com.example.hmg
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -80,6 +81,14 @@ class RankingAdapter(private val rankings: List<Triple<String, Int, String>>) :
         holder.rankTextView.text = "#${position + 1}"
         holder.playerNameTextView.text = playerName
         holder.streakTextView.text = "Streak: $streak"
+
+        // Đặt màu nền dựa trên vị trí
+        when (position) {
+            0 -> holder.rankTextView.setBackgroundColor(Color.YELLOW) // Màu vàng cho hạng #1
+            1 -> holder.rankTextView.setBackgroundColor(Color.LTGRAY) // Màu bạc cho hạng #2
+            2 -> holder.rankTextView.setBackgroundColor(0xFFA0522D.toInt()) // Màu nâu đồng cho hạng #3
+            else -> holder.rankTextView.setBackgroundColor(Color.TRANSPARENT) // Không đổi màu cho hạng #4 trở đi
+        }
     }
 
     override fun getItemCount() = rankings.size
