@@ -153,11 +153,17 @@ class MainActivity : AppCompatActivity() {
         dialog.setView(dialogView)
             .setTitle("Congratulations! Enter Your Name")
             .setMessage("You achieved a streak of $finalStreak! Enter your name:")  // Use finalStreak instead of streak
+            .setCancelable(false)
             .setPositiveButton("Save") { _, _ ->
                 val playerName = editTextName.text.toString()
-                if (playerName.isNotEmpty()) {
+                val hasSpecialChar = playerName.any { it.isDigit() || "!@#\$%^&*()_+=-".contains(it) }
+                val startsWithUppercase = playerName.isNotEmpty() && playerName[0].isUpperCase()
+                if (playerName.isNotEmpty() && playerName.length <= 20 && startsWithUppercase && hasSpecialChar) {
                     dbHelper.saveHighScore(playerName, finalStreak)  // Save the finalStreak
                     Toast.makeText(this, "Score saved!", Toast.LENGTH_SHORT).show()
+                } else if (playerName.length > 20) {
+                    // Nếu nhập quá 20 ký tự, hiển thị thông báo
+                    Toast.makeText(this, "Invalid input", Toast.LENGTH_SHORT).show()
                 }
             }
             .setNegativeButton("Cancel") { dialog, _ ->

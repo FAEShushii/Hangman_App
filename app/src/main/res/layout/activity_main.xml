@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_main"
+    android:background="@drawable/bg_test"
     android:paddingBottom="10dp"
     tools:context=".MainActivity">
 
@@ -14,7 +14,7 @@
         android:layout_marginTop="20dp"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:backgroundTint="@color/blue"
+        app:backgroundTint="#4682B4"
         android:background="@drawable/home_button_background"
         android:drawableTop="@drawable/ic_home"
         android:padding="10dp"

@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -70,6 +71,7 @@ class RankingAdapter(private val rankings: List<Triple<String, Int, String>>) :
         val rankTextView: TextView = view.findViewById(R.id.rankTextView)
         val playerNameTextView: TextView = view.findViewById(R.id.playerNameTextView)
         val streakTextView: TextView = view.findViewById(R.id.streakTextView)
+        val playerImageView: ImageView = itemView.findViewById(R.id.playerImageView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -87,11 +89,20 @@ class RankingAdapter(private val rankings: List<Triple<String, Int, String>>) :
         // Đặt màu nền của toàn bộ item dựa trên vị trí
         val backgroundColor = when (position) {
             0 -> Color.rgb(255, 215, 0) // Màu vàng cho hạng #1
-            1 -> Color.LTGRAY // Màu bạc cho hạng #2
+            1 -> Color.rgb(192, 192, 192)// Màu bạc cho hạng #2
             2 -> 0xFFA0522D.toInt() // Màu nâu đồng cho hạng #3
-            else -> Color.rgb(100, 149, 237) // Không đổi màu cho hạng #4 trở đi
+            else -> Color.WHITE // Không đổi màu cho hạng #4 trở đi
         }
         holder.itemView.setBackgroundColor(backgroundColor)
+
+        val playerImageResId = when (position) {
+            0 -> R.drawable.player1_image
+            1 -> R.drawable.player2_image
+            2 -> R.drawable.player3_image
+            3 -> R.drawable.player4_image
+            else -> R.drawable.player5_image
+        }
+        holder.playerImageView.setImageResource(playerImageResId)
     }
 
     override fun getItemCount() = rankings.size

@@ -10,12 +10,12 @@ class IntroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_intro)
 
-        val twoPlayersButton: Button = findViewById(R.id.twoPlayersButton)
+        /*val twoPlayersButton: Button = findViewById(R.id.twoPlayersButton)
         twoPlayersButton.setOnClickListener {
             val intent = Intent(this, SetWordActivity::class.java)
             startActivity(intent)
             finish() // Để không quay lại màn hình giới thiệu khi nhấn nút back
-        }
+        }*/
         val rankButton : Button = findViewById(R.id.rankButton)
         rankButton.setOnClickListener{
             val intent = Intent(this, RankActivity::class.java)
