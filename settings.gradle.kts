@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "HMG"
+rootProject.name = "BTL"
 include(":app")
+ 

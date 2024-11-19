@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.hmg"
+    namespace = "com.example.btl"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.hmg"
+        applicationId = "com.example.btl"
         minSdk = 21
         targetSdk = 34
         versionCode = 1

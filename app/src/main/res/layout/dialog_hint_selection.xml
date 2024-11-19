@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose a hint to enable:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+    <RadioGroup
+            android:id="@+id/hintRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <RadioButton
+                android:id="@+id/radioHint1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Reveal Letter Hint"
+                android:padding="8dp"/>
+
+        <RadioButton
+                android:id="@+id/radioHint2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remove Wrong Letters"
+                android:padding="8dp"/>
+
+        <RadioButton
+                android:id="@+id/radioHint3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Extra Life"
+                android:padding="8dp"/>
+    </RadioGroup>
+
+    <TextView
+            android:id="@+id/timerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time remaining: 10s"
+            android:textAlignment="center"
+            android:layout_marginTop="16dp"/>
+</LinearLayout>
